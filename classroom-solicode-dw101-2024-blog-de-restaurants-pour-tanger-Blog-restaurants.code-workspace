@@ -1,9 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "classroom-solicode-dw101-2024-blog-de-restaurants-pour-tanger-Blog-restaurants",
 			"path": "."
 		},
 		{
+			"name": "Restaurant API",
 			"path": ".."
 		}
 	],
