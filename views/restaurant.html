@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- <img src="../public/imgs/logo-2.png" style="width: 60px; border-radius: 10px;"> -->
+        <div class="logo">
+            <a href="#"><span class="r">R</span>Restaurantfinder</a>
+        </div>
+        <!-- <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Listings</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav> -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="cards-details">
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-branding">
+                <div class="logo">
+                    <a href="#"><span class="r">R</span>Restaurantfinder</a>
+                </div>
+                <p>Explore the best dining experiences near you! Find restaurants, read reviews, and enjoy the ultimate foodie adventure.</p>
+            </div>
+      
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+      
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@restaurantfinder.com</p>
+                <p>Phone: +2624 00000000</p>
+                <p>Address: 123 Foodie Lane, Gourmet City</p>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f" style="color: #4E64B5;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" style="color: #00ACED;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram" style="color: #9A8554;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube" style="color: #C82929;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 RestaurantFinder. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const logo = document.querySelector(".logo a");
+
+        if (logo) {
+            logo.addEventListener("click", () => {
+                window.location.href = "./index.html"        
+            });
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const value = params.get('card');
+        const restaurant=JSON.parse(decodeURIComponent(value));
+
+        const card = document.createElement('div');
+        card.classList.add('card');
+        const cardsContainer = document.querySelector('.cards-details');
+
+        card.innerHTML = `
+            <img src="${restaurant.picture}" alt="${restaurant.name}">
+            <div class="infos">
+                <div class="card-content">
+                    <h2 class="name" style="margin-bottom: 20px">${restaurant.name}</h2>
+                    <p style="margin-bottom: 20px"><strong>Address:</strong> ${restaurant.address}</p>
+                    <p style="margin-bottom: 20px"><strong>Cuisine:</strong> ${restaurant.cuisine_nature}</p>
+                    <p class="notation" style="margin-bottom: 20px">⭐ ${restaurant.rating}</p>
+                    <span class="phone">📞 ${restaurant.phone}</span>
+                </div>
+                <div class="card-actions">
+                    <a href="${restaurant.site}" target="_blank">Visit Site</a>
+                </div>
+            </div>
+        `;
+    
+        cardsContainer.appendChild(card);
+    </script>
+</body>
+</html>

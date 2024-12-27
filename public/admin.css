@@ -1,0 +1,304 @@
+/*** Global CSS ***/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Red Hat Text", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 30px;
+}
+
+/*** header ***/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    position: relative;
+    margin-left: 50px;
+}
+
+.logo .r {
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: wheat;
+    color: #333;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.logo span {
+    color: #ff6347;
+}
+
+/*** table ***/
+
+.restaurant-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-table th, .restaurant-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.restaurant-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.restaurant-table .cuisine {
+    width: 300px;
+}
+
+.restaurant-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.restaurant-table td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.restaurant-table .btns button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px 5px 30px 5px;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add:hover {
+    background-color: #409144;
+}
+
+.restaurant-table .delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.restaurant-table .delete:hover {
+    background-color: #da190b;
+}
+
+.restaurant-table .update {
+    background-color: #FF9800;
+    color: white;
+}
+
+.restaurant-table .update:hover {
+    background-color: #dF7800;
+}
+
+.restaurant-table .details-card {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.restaurant-table .details-card:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .restaurant-table th, .restaurant-table td {
+        padding: 8px;
+    }
+
+    .restaurant-table td img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .restaurant-table .btns button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/*** footer ***/
+
+footer {
+    background-color: #1C1F2F;
+    color: #A6A6A7;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-branding {
+    max-width: 300px;
+}
+
+.footer-branding .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-branding .logo .r {
+    padding: 20px;
+    left: -46px;
+}
+
+.footer-branding p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #A6A6A7;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #ff6347;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 5px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #141421;
+    border: 1px solid #2e2e4c;
+    box-shadow: 3px 9px 16px rgba(0, 0, 0, 0.4), 
+                -3px -3px 10px rgba(255, 255, 255, 0.06), 
+                inset 14px 14px 26px rgba(0, 0, 0, 0.3), 
+                inset -3px -3px 15px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.social-icons li a:hover {
+    box-shadow: 0 0 20px rgba(84, 1, 74, 0.7);
+    border-color: rgba(255, 6, 224, 0.61);
+    background: linear-gradient(to right, rgba(255, 9, 9, 0.12941176470588237), #c000ffb5, rgba(255, 0, 94, 0.14));
+}
+
+.social-icons li a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 14px;
+    position: relative;
+}
+
+.footer-bottom p {
+    color: rgb(186, 177, 177);
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 440px) {
+    .footer-branding {
+        width: 100%;
+    }
+}

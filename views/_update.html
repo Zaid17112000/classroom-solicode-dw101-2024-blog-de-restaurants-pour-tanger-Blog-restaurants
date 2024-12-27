@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- <img src="../public/imgs/logo-2.png" style="width: 60px; border-radius: 10px;"> -->
+        <div class="logo">
+            <a href="#"><span class="r">R</span>Restaurantfinder</a>
+        </div>
+        <!-- <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Listings</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav> -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="update">
+        <img src="../public/imgs/left-arrow.png" class="left-arrow">
+        <form id="updateForm">
+            <!-- Field for the new name -->
+            <label for="name">New Name</label>
+            <input type="text" id="name" name="name" placeholder="New Name" required>
+            <label for="cuisine_nature">Cuisine Nature</label>
+            <input type="text" id="cuisine_nature" name="cuisine_nature" placeholder="Cuisine Nature" required>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" name="rating" placeholder="Rating" step="0.1" required>
+            <label for="picture">Picture</label>
+            <input type="url" id="picture" name="picture" placeholder="Picture URL" required>
+            <label for="website">Website</label>
+            <input type="text" id="website" placeholder="Website" style="margin-bottom: 20px;" required><br>
+            <button type="submit" class="submit">Update Restaurant</button>
+        </form>
+    </div>
+    
+    <footer style="margin-top: 0;">
+        <div class="footer-container">
+            <div class="footer-branding">
+                <div class="logo">
+                    <a href="#"><span class="r">R</span>Restaurantfinder</a>
+                </div>
+                <p>Explore the best dining experiences near you! Find restaurants, read reviews, and enjoy the ultimate foodie adventure.</p>
+            </div>
+      
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+      
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@restaurantfinder.com</p>
+                <p>Phone: +2624 00000000</p>
+                <p>Address: 123 Foodie Lane, Gourmet City</p>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f" style="color: #4E64B5;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" style="color: #00ACED;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram" style="color: #9A8554;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube" style="color: #C82929;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 RestaurantFinder. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let submit = document.querySelector(".submit");
+
+        submit.addEventListener("click", () => {
+            window.location.href = "./admin.html";
+        });
+
+        let leftArrow = document.querySelector(".left-arrow");
+
+        leftArrow.addEventListener("click", () => {
+            window.location.href = "./admin.html";
+        })
+    </script>
+    <script src="../admin.js"></script>
+</body>
+</html>
